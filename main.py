@@ -2,7 +2,7 @@ def write_file(sample_func):
     def execute():
         result_2 = sample_func()
         with open(result_2, "w+") as my_file:
-            print(my_file.write("today is a very good day"))
+            print(my_file.write(result_2))
 
     return execute
 
@@ -10,8 +10,7 @@ def write_file(sample_func):
 def create_file(sample_fuc):
     def execute():
         result = sample_fuc()
-        with open(result, "r") as my_file:
-            print(my_file.read())
+        with open(result, "w") as my_file:
         return result
 
     return execute
